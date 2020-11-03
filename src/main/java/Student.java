@@ -6,14 +6,14 @@ public class Student extends Person {
     // Constructors
     // A constructor that takes three parameters for the
     // firstName, lastName, and classYear
-    public Student(String a, String b, int c) {
-        super(a, b);
-        this.classYear = c;
+    public Student(String firstName, String lastName, int classYear) {
+        super(firstName, lastName);
+        this.classYear = classYear;
     }
 
     // A default/no-argument constructor
     public Student() {
-        super("Jerry", "Seinfeld");
+        super();
         this.classYear = 2024;
     }
 
