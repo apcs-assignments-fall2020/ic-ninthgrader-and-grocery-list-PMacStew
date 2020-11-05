@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class NinthGraderClient {
     public static void main(String[] args) {
+        //I was just messing around with some bad code
         Scanner scan = new Scanner(System.in);
         GroceryList list1 = new GroceryList();
         String addSubtractAnswer = "";
