@@ -6,9 +6,17 @@ public class GroceryList {
     }
     public void add(String add) {
         for (int i = 0; i < this.list.length; i++) {
-            if (this.list[i] == null)
+            if (this.list[i] == null) {
                 this.list[i] = add;
+                break;
+            }
         }
+    }
+    public String getListInstance(int index) {
+        return this.list[index];
+    }
+    public String[] getList() {
+        return this.list;
     }
     public void remove(String remove) {
         for (int i = 0; i < this.list.length; i++) {
