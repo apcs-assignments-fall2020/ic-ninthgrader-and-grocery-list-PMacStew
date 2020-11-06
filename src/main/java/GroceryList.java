@@ -20,20 +20,15 @@ public class GroceryList {
     }
     public void remove(String remove) {
         for (int i = 0; i < this.list.length; i++) {
-            if (!this.list[i].equals(null))
-                System.out.print("");
-            else
-                break;
-            if (this.list[i].equals(remove))
-                this.list[i] = "";
-        }
-        for (int i = 0; i < this.list.length - 1; i++) {
-            if (this.list[i].equals("") && !this.list[i + 1].equals("")) {
-                this.list[i] = this.list[i + 1];
-                this.list[i + 1] = "";
+            if (this.list[i] != null && this.list[i].equals(remove)) {
+                this.list[i] = null;
+                for (int j = i; j < this.list.length - 1; j++) {
+                    if (this.list[j] == null && this.list[j + 1] != null) {
+                        this.list[j] = this.list[j + 1];
+                        this.list[j + 1] = null;
+                    }
+                }
             }
-            if (this.list[i] == "" & this.list[i + 1] == "") 
-                break;
         }
     }
     public String toString() {
